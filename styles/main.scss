@@ -14,3 +14,104 @@ body {
     .container { display: none }
   }
 }
+
+// Cover
+
+.cover {
+  display: flex;
+  align-items: center;
+  background: url('../assets/banners.jpg') no-repeat center 40%;
+  background-size: contain;
+  min-height: 95vh;
+}
+
+.cover-wrapper {
+  max-width: 20em;
+  margin: 0 auto;
+  text-align: center;
+
+  .logo {
+    display: block;
+    width: 100%;
+    margin-bottom: 5em;
+  }
+}
+
+// Slideshow
+
+.slideshow {
+  position: relative;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 20em;
+    background-size: contain;
+  }
+
+  &:before {
+    top: -1px;
+    background: url('../assets/cover-lights.png') no-repeat center top;
+  }
+
+  &:after {
+    bottom: -1px;
+    background: url('../assets/cover-banners.png') no-repeat center top;
+  }
+}
+
+.slideshow-wrapper {
+
+}
+
+// Copy
+
+.copy {
+
+}
+
+.copy-wrapper {
+  max-width: 60vw;
+  margin: 15vw auto;
+  text-align: center;
+}
+
+// Locations
+
+.locations {
+
+  .wedding,
+  .party {
+    position: relative;
+    color: white;
+
+    &-wrapper {
+      position: absolute;
+      top: 5em;
+    }
+  }
+
+  .wedding-wrapper {
+    right: 5vw;
+  }
+
+  .party-wrapper {
+    left: 5vw;
+  }
+
+  strong {
+    display: block;
+    margin-bottom: 1em;
+  }
+
+  .map {
+    display: inline-block;
+    color: white;
+    border: 3px solid white;
+    padding: 1em 2em;
+    text-decoration: none;
+  }
+}
