@@ -15,6 +15,11 @@ body {
   }
 }
 
+h1,
+h2 {
+  font-weight: 300;
+}
+
 // Cover
 
 .cover {
@@ -41,6 +46,7 @@ body {
 
 .slideshow {
   position: relative;
+  z-index: 1;
 
   &:before,
   &:after {
@@ -49,17 +55,22 @@ body {
     left: 0;
     right: 0;
     height: 20em;
-    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100%;
   }
 
   &:before {
     top: -1px;
-    background: url('../assets/cover-lights.png') no-repeat center top;
+    background-image: url('../assets/cover-lights.png');
+    background-position: center top;
+    z-index: 2;
   }
 
   &:after {
     bottom: -1px;
-    background: url('../assets/cover-banners.png') no-repeat center top;
+    background-image: url('../assets/cover-banners.png');
+    background-position: center bottom;
+    z-index: 2;
   }
 }
 
@@ -82,6 +93,33 @@ body {
 // Locations
 
 .locations {
+  position: relative;
+  z-index: 10;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 10vw;
+    background-image: url('../assets/cover-blank.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+  }
+
+  &:before {
+    top: -1px;
+    z-index: 11;
+  }
+
+  &:after {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    bottom: -1px;
+    z-index: 12;
+  }
 
   .wedding,
   .party {
