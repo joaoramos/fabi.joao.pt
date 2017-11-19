@@ -17,13 +17,26 @@
       <section class="cover">
         <div class="cover-wrapper">
           <img src="assets/circle.png" class="logo" alt="">
-          <h1>Fabi e João</h1>
-          <h2>Celebram com família e amigos o <em>sim</em> arrancado em Budapeste</h2>
+          <div class="name">
+            <img src="assets/name.png" alt="Fabi e João">
+          </div>
+          <h1>Celebram com família e amigos o <em>sim</em> arrancado em Budapeste</h1>
         </div>
       </section>
       <section class="slideshow">
-        <ul>
-          <li><img src="assets/picture-1.jpg" alt=""></li>
+        <ul id="slides">
+          <li class="slide showing"><img src="assets/slideshow/hallstatt.jpg" alt=""></li>
+          <li class="slide"><img src="assets/slideshow/antwerp.jpg" alt=""></li>
+          <li class="slide"><img src="assets/slideshow/budapest-bastion.jpg" alt=""></li>
+          <li class="slide"><img src="assets/slideshow/budapest-opera.jpg" alt=""></li>
+          <li class="slide"><img src="assets/slideshow/budapest-szimpla.jpg" alt=""></li>
+          <li class="slide"><img src="assets/slideshow/greece-underwater.jpg" alt=""></li>
+          <li class="slide"><img src="assets/slideshow/klimataria.jpg" alt=""></li>
+          <li class="slide"><img src="assets/slideshow/laax.jpg" alt=""></li>
+          <li class="slide"><img src="assets/slideshow/maybachufer.jpg" alt=""></li>
+          <li class="slide"><img src="assets/slideshow/mayrhofen.jpg" alt=""></li>
+          <li class="slide"><img src="assets/slideshow/rome.jpg" alt=""></li>
+          <li class="slide"><img src="assets/slideshow/unu.jpg" alt=""></li>
         </ul>
       </section>
       <section class="copy">
@@ -50,6 +63,15 @@
     </div>
 
     <script>
+      var slides = document.querySelectorAll('#slides .slide');
+      var currentSlide = 0;
+      var slideInterval = setInterval(nextSlide,2000);
+
+      function nextSlide() {
+        slides[currentSlide].className = 'slide';
+        currentSlide = (currentSlide+1)%slides.length;
+        slides[currentSlide].className = 'slide showing';
+      }
     </script>
   </body>
 </html>
