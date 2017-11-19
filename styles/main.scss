@@ -2,18 +2,11 @@
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
   font-weight: 300;
   letter-spacing: 1px;
   line-height: 1.638;
   position: relative;
-  min-height: 5000px;
-
-  &.mockup {
-    background: url('../assets/mockup.jpg') left top no-repeat;
-    background-size: cover;
-
-    .container { display: none }
-  }
 }
 
 h1,
@@ -28,11 +21,11 @@ h2 {
   align-items: center;
   background: url('../assets/banners.jpg') no-repeat center 30%;
   background-size: contain;
-  min-height: 95vh;
+  min-height: 100vh;
 }
 
 .cover-wrapper {
-  max-width: 20em;
+  max-width: 16em;
   margin: 0 auto;
   text-align: center;
 
@@ -40,6 +33,11 @@ h2 {
     display: block;
     width: 100%;
     margin-bottom: 5em;
+  }
+
+  .name {
+    width: 16em;
+    margin: 0 auto;
   }
 }
 
