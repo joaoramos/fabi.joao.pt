@@ -113,6 +113,9 @@ h2 {
   max-width: 60vw;
   margin: 15vw auto;
   text-align: center; }
+  .copy-wrapper .date {
+    font-weight: 600;
+    margin-bottom: 1em; }
 
 .locations {
   position: relative;
