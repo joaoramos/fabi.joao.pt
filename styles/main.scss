@@ -137,7 +137,7 @@ h2 {
   &:after {
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
-    bottom: -1px;
+    bottom: 6px;
     z-index: 12;
   }
 
@@ -145,15 +145,26 @@ h2 {
   .party {
     position: relative;
     color: white;
+    text-shadow: 0 0 25px rgba(0,0,0,0.25);
+    @media only screen and (min-width: 680px) {
+      text-shadow: none;
+    }
 
     &-wrapper {
       position: absolute;
-      top: 5em;
+      top: 1em;
+      @media only screen and (min-width: 480px) {
+        top: 3em;
+      }
+      @media only screen and (min-width: 680px) {
+        top: 6em;
+      }
     }
   }
 
   .wedding-wrapper {
     right: 5vw;
+    margin-left: 5vw;
   }
 
   .party-wrapper {
@@ -166,11 +177,16 @@ h2 {
   }
 
   .map {
-    display: inline-block;
-    color: white;
+    background: rgba(0, 0, 0, 0.2);
     border: 3px solid white;
-    padding: 1em 2em;
+    color: white;
+    display: inline-block;
+    padding: 0.5em 1em;
     text-decoration: none;
+      @media only screen and (min-width: 680px) {
+        background: none;
+        padding: 1em 2em;
+    }
   }
 }
 
