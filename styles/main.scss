@@ -152,45 +152,22 @@ h2 {
     position: relative;
     color: white;
 
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 100%;
-      width: 100%;
-      background: rgba(0,0,0, .35);
-      z-index: 6;
-    }
-
-    @media only screen and (min-width: 680px) {
-      &:after {
-        display: none;
-      }
-    }
-
     img {
       vertical-align: middle;
     }
 
     &-wrapper {
-      position: absolute;
-      top: 1em;
-      z-index: 15;
+      margin: 5vw 5vw 10vw;
+      text-align: center;
 
-      @media only screen and (min-width: 480px) {
-        top: 3em;
-      }
       @media only screen and (min-width: 680px) {
+        position: absolute;
         top: 6em;
+        margin: auto;
+        text-align: left;
+        z-index: 15;
       }
     }
-  }
-
-  .wedding-wrapper,
-  .party-wrapper {
-    left: 5vw;
   }
 
   @media only screen and (min-width: 680px) {
@@ -208,17 +185,24 @@ h2 {
   strong {
     display: block;
     margin-bottom: 1em;
+    color: black;
+
+    @media only screen and (min-width: 680px) {
+      color: white;
+    }
   }
 
   .map {
-    border: 3px solid white;
-    color: white;
+    border: 3px solid black;
+    color: black;
     display: inline-block;
     padding: 0.5em 1em;
     text-decoration: none;
 
     @media only screen and (min-width: 680px) {
-        padding: 1em 2em;
+      padding: 1em 2em;
+      color: white;
+      border-color: white;
     }
   }
 }
