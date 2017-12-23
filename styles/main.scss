@@ -120,43 +120,65 @@ h2 {
   position: relative;
   z-index: 10;
 
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 10vw;
-    background-image: url('../assets/cover-blank.png');
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: 100%;
-  }
+  @media only screen and (min-width: 680px) {
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 10vw;
+      background-image: url('../assets/cover-blank.png');
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: 100%;
+    }
 
-  &:before {
-    top: -1px;
-    z-index: 11;
-  }
+    &:before {
+      top: -1px;
+      z-index: 11;
+    }
 
-  &:after {
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    bottom: 6px;
-    z-index: 12;
+    &:after {
+      transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      bottom: -1px;
+      z-index: 12;
+    }
   }
 
   .wedding,
   .party {
     position: relative;
     color: white;
-    text-shadow: 0 0 25px rgba(0,0,0,0.25);
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0,0,0, .35);
+      z-index: 6;
+    }
+
     @media only screen and (min-width: 680px) {
-      text-shadow: none;
+      &:after {
+        display: none;
+      }
+    }
+
+    img {
+      vertical-align: middle;
     }
 
     &-wrapper {
       position: absolute;
       top: 1em;
+      z-index: 15;
+
       @media only screen and (min-width: 480px) {
         top: 3em;
       }
@@ -166,13 +188,21 @@ h2 {
     }
   }
 
-  .wedding-wrapper {
-    right: 5vw;
-    margin-left: 5vw;
-  }
-
+  .wedding-wrapper,
   .party-wrapper {
     left: 5vw;
+  }
+
+  @media only screen and (min-width: 680px) {
+    .wedding-wrapper {
+      left: auto;
+      right: 5vw;
+      margin-left: 5vw;
+    }
+
+    .party-wrapper {
+      left: 5vw;
+    }
   }
 
   strong {
@@ -181,14 +211,13 @@ h2 {
   }
 
   .map {
-    background: rgba(0, 0, 0, 0.2);
     border: 3px solid white;
     color: white;
     display: inline-block;
     padding: 0.5em 1em;
     text-decoration: none;
-      @media only screen and (min-width: 680px) {
-        background: none;
+
+    @media only screen and (min-width: 680px) {
         padding: 1em 2em;
     }
   }
