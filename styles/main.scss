@@ -10,8 +10,22 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-weight: 300;
+}
+
+h2,
+h3 {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+
+.copy-wrapper {
+  max-width: 60vw;
+  margin: 10vw auto;
+  text-align: center;
 }
 
 // Cover
@@ -98,20 +112,9 @@ h2 {
   z-index: 5;
 }
 
-// Copy
+// Description
 
-.copy {
-
-}
-
-.copy-wrapper {
-  max-width: 60vw;
-  margin: 15vw auto;
-  text-align: center;
-  .date{
-    font-weight: 600;
-    margin-bottom: 1em;
-  }
+.description {
 }
 
 // Locations
@@ -207,9 +210,60 @@ h2 {
   }
 }
 
-// Footer
+// Hosting
 
-footer .disclaimer {
+.hosting {
+
+  table {
+    width: 100%;
+    margin-top: 2em;
+  }
+
+  .table-header {
+    display: none;
+
+    @media only screen and (min-width: 1000px) {
+      display: table-row;
+    }
+  }
+
+  table tr {
+    display: block;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+
+    @media only screen and (min-width: 1000px) {
+      display: table-row;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  table td {
+    display: block;
+    text-align: center;
+
+    @media only screen and (min-width: 1000px) {
+      display: table-cell;
+      text-align: left;
+    }
+  }
+
+  td span {
+    font-size: 7px;
+    position: relative;
+    top: -5px;
+    color: #ccc;
+  }
+
+  td img {
+    height: 12px;
+  }
+}
+
+// RSVP
+
+.rsvp div {
   text-align: center;
   padding: 5em 2em;
 }
